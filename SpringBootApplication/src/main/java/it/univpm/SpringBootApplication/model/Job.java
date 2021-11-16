@@ -15,7 +15,7 @@ public class Job {
 	private String url;
 	private ArrayList<String> keywords = new ArrayList<String>();
 	
-	public Job(String id, String company_name, double num_employees, String location, boolean remote, boolean employment_type, String date, ArrayList<String> keywords) {
+	public Job(String id, String company_name, double num_employees, String location, boolean remote, boolean employment_type, String url, String date, ArrayList<String> keywords) {
 		this.id = id;
 		this.company_name = company_name;
 		this.num_employees = num_employees;
