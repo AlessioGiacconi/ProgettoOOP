@@ -30,7 +30,7 @@ public class ApiCall {
 					in.close();
 				}
 			}catch(Exception e) {
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Città non trovata");
+				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "City not found..");
 			}
 			return data;
 		}

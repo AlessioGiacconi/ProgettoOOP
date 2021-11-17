@@ -2,62 +2,65 @@ package it.univpm.SpringBootApplication.service;
 
 import java.util.ArrayList;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ParseException;
+
+import com.google.gson.*;
 
 import it.univpm.SpringBootApplication.model.Job;
 
 public class Parse {
 		
-		Job job;
 		
-		public Job Parsing(String data, String city) {
-			JSONObject obj = null;
+		public JSONArray Parsing(String data, String city) throws ParseException {
+			JSONArray objArr = null;
 			try {
-				obj = (JSONObject)JSONValue.parseWithException(data);
+				objArr = (JSONArray)JSONValue.parseWithException(data);
 			}catch (ParseException e) {
 				e.printStackTrace();
 			}
 			
-			JSONObject infoJobs = (JSONObject) obj.get("sys");
-			
-			job.setLocation(city);
-			
-			String id = (String)infoJobs.get("id");
-			job.setId(id);
-			
-			String company_name = (String)infoJobs.get("company_name");
-			job.setCompany_name(company_name);
-			
-			double num_employees = (double)infoJobs.get("num_employees");
-			job.setNum_employees(num_employees);
-			
-			String remote = (String)infoJobs.get("remote");
-			if (remote == "true") {
-				job.setRemote(true);
-			}else {
-				job.setRemote(false);
+			ArrayList<Job> array = new ArrayList<Job>();
+			for(Object o: objArr)
+			{
+				if(o instanceof JSONObject)
+				{
+					JSONObject o1 = (JSONObject) o;
+						try
+						{
+							String id = (String) o1.get("id");
+							String company_name = (String) o1.get("company_name");
+							double num_employees = (double) o1.get("num_employees");
+							boolean remote = (boolean) o1.get("remote");
+							boolean employment_type = (boolean) o1.get("employment_type");
+							String location = city;
+							String date = (String) o1.get("date");
+							String url = (String) o1.get("url");
+							ArrayList<String> keywords = (ArrayList<String>) o1.get("keywords");
+							
+							Job j = new Job(id, company_name, num_employees, location, remote, employment_type, date, url, keywords );
+							array.add(j);
+						}
+						catch(Exception e) {
+							System.out.println("An error occured during parament collection..");
+								
+						}
+					
 			}
-			
-			String employment_type = (String)infoJobs.get("employment_type");
-			if (employment_type == "true") {
-				job.setEmployment_type(true);
-			}else {
-				job.setEmployment_type(false);
-			}
-			
-			String date = (String)infoJobs.get("date");
-			job.setDate(date);
-			
-			String url = (String)infoJobs.get("url");
-			job.setUrl(url);
-			
-			ArrayList<String> keywords = (ArrayList<String>)infoJobs.get("keywords");
-			job.setKeywords(keywords);
-			
-			return job;
 			
 		}
+			JSONArray jobList = new JSONArray();
+			jobList = (JSONArray) JSONValue.parseWithException(ParsingToJSON(array));
+			array.clear();
+			return jobList;
+		}
 		
+		public static String ParsingToJSON(ArrayList<?> param) {
+			
+			Gson out = new  GsonBuilder().setPrettyPrinting().create();
+			String outFinal = out.toJson(param);
+			return outFinal;
+		}
 }
