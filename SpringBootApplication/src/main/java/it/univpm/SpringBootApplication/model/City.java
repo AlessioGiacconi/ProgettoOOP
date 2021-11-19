@@ -15,10 +15,6 @@ public class City {
 	
 	public City() {
 		this.setDescription("Monitored cities:");
-		/*Vector<String> names = this.getNames();
-		for(String n : names) {
-			System.out.println(n);
-		}*/
 	}
 	
 	public Vector<String> getNames(){

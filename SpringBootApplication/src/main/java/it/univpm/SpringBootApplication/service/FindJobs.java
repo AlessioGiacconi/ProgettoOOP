@@ -1,48 +1,44 @@
 package it.univpm.SpringBootApplication.service;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Scanner;
+import java.util.Map;
 import java.util.Vector;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 
 import it.univpm.SpringBootApplication.model.City;
-
+import it.univpm.SpringBootApplication.model.Job;
+import it.univpm.SpringBootApplication.service.url;
 
 public class FindJobs {
 	
 		ApiCall call;
 		Parse parse;
 		City c;
+		url u;
 		
-	public JSONArray getJobs(String city) throws ParseException {
+	public JSONArray getJobs() throws ParseException {
 			
-		call.readAPIKey();
-		String url = "https://findwork.dev/api/jobs/?search=python&source=&location" + city + "&sort_by=relevance"; //controllare se serve apikey nell url
-		String data = call.callAPI(url);
-		JSONArray j = parse.Parsing(data, city);
-	
-		return j;
+		String APIKey = call.readAPIKey();
+		Vector<String> checkedCities = c.getNames();
+		JSONArray j = new JSONArray();
 		
+		for(String s : checkedCities) {
+			String url = u.Loc(s);
+			String data = call.callAPI(url);
+			j = parse.Parsing(data);
+		}
+		return j;
 	}
 	
-	public Vector<String> getCities(){
-		Vector<String> cities = new Vector<String>();
-		try {
-			Scanner fileIn = new Scanner(new BufferedReader(new FileReader("doc/" + "Cities.txt")));
-			while(fileIn.hasNext()) {
-				cities.add(fileIn.nextLine());
-			}
-			fileIn.close();
-		}catch (IOException e) {
-			System.out.println("I/O error..");
-			System.out.println(e);
-		}
-		return cities;
- 	}
-	
+	public JSONArray filteredJobs(Map<String,Object> body) throws ParseException {
+		
+		JSONArray finalOutput = new JSONArray();
+		if((body.get("location") != null) && (body.get("remote") != null) && (body.get("employment_type") != null)) {
+			String url = u.LocRemPtFt((String)body.get("location"), (boolean)body.get("remote"), (boolean)body.get("employment_type"));
+			String data = call.callAPI(url);
+			finalOutput = parse.Parsing(data);
+		}else if((body.get("location") != null) && (body.get)
+	}
 	
 }
