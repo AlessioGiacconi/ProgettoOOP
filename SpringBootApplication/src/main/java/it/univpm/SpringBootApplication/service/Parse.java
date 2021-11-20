@@ -36,12 +36,7 @@ public class Parse {
 						{
 							long id = (long) o1.get("id");
 							String company_name = (String) o1.get("company_name");
-							double num_employees;
-							if(o1.get("num_employees") != null) {
-								num_employees = (double) o1.get("num_employees");
-							}else {
-								num_employees = Double.NaN;
-							}
+							String num_employees = (String) o1.get("company_num_employees");
 							boolean remote = (boolean) o1.get("remote");
 							String employment_type;
 							if(o1.get("employment_type") != "null") {

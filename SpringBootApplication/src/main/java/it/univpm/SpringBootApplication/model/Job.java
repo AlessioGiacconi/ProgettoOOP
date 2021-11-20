@@ -7,7 +7,7 @@ public class Job {
 
 	private long id;
 	private String company_name;
-	private double num_employees;
+	private String num_employees;
 	private String location;
 	private boolean remote;
 	private String employment_type;
@@ -19,7 +19,7 @@ public class Job {
 		
 	}
 	
-	public Job(long id, String company_name, double num_employees, String location, boolean remote, String employment_type, String url, String date, ArrayList<String> keywords) {
+	public Job(long id, String company_name, String num_employees, String location, boolean remote, String employment_type, String url, String date, ArrayList<String> keywords) {
 		this.id = id;
 		this.company_name = company_name;
 		this.num_employees = num_employees;
@@ -49,11 +49,11 @@ public class Job {
 	}
 	
 	
-	public double getNum_employees() {
+	public String getNum_employees() {
 		return num_employees;
 	}
 	
-	public void setNum_employees(double num_employees) {
+	public void setNum_employees(String num_employees) {
 		this.num_employees = num_employees;
 	}
 	
