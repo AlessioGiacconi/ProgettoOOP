@@ -22,12 +22,14 @@ public class FindJobs {
 		call.readAPIKey();
 		Vector<String> checkedCities = c.getNames();
 		ArrayList<Job> a = new ArrayList<Job>();
+		ArrayList<Job> allJobs = new ArrayList<Job>();
 		for(String s : checkedCities) {
 			String url = u.Loc(s);
 			String data = call.callAPI(url);
 			a = parse.Parsing(data);
+			allJobs.addAll(a);
 			}
-		return a;
+		return allJobs;
 	}
 	
 	/*public JSONArray filteredJobs(Map<String,Object> body) throws ParseException {
