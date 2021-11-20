@@ -20,7 +20,7 @@ import it.univpm.SpringBootApplication.service.Parse;
 @RestController
 public class restController {
 
-	FindJobs fjobs;
+	FindJobs fjobs = new FindJobs();
 	
 	@GetMapping(value="/Jobs")
 	public ResponseEntity<Object> jobList() {
@@ -28,6 +28,7 @@ public class restController {
 			return new ResponseEntity<>(fjobs.getJobs(), HttpStatus.OK);
 		}catch(ParseException e) {
 			System.out.println(e);
+			e.printStackTrace();
 			return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -37,9 +38,9 @@ public class restController {
 		return new City();
 	}
 	
-	@PostMapping(value="/Filters")
+	/*@PostMapping(value="/Filters")
 	public ResponseEntity<Object> filteredJobList(@RequestBody JSONObject body){
 		Map<String, Object> bodyMap = Parse.JSONStringToMap(body.toJSONString());
 		
-	}
+	}*/
 }

@@ -1,9 +1,9 @@
 package it.univpm.SpringBootApplication.service;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Vector;
 
-import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 
 import it.univpm.SpringBootApplication.model.City;
@@ -12,26 +12,25 @@ import it.univpm.SpringBootApplication.service.url;
 
 public class FindJobs {
 	
-		ApiCall call;
-		Parse parse;
-		City c;
-		url u;
+		ApiCall call = new ApiCall();
+		Parse parse = new Parse();
+		City c = new City();
+		url u = new url();
 		
-	public JSONArray getJobs() throws ParseException {
+	public ArrayList<Job> getJobs() throws ParseException {
 			
-		String APIKey = call.readAPIKey();
+		call.readAPIKey();
 		Vector<String> checkedCities = c.getNames();
-		JSONArray j = new JSONArray();
-		
+		ArrayList<Job> a = new ArrayList<Job>();
 		for(String s : checkedCities) {
 			String url = u.Loc(s);
 			String data = call.callAPI(url);
-			j = parse.Parsing(data);
-		}
-		return j;
+			a = parse.Parsing(data);
+			}
+		return a;
 	}
 	
-	public JSONArray filteredJobs(Map<String,Object> body) throws ParseException {
+	/*public JSONArray filteredJobs(Map<String,Object> body) throws ParseException {
 		
 		JSONArray finalOutput = new JSONArray();
 		if((body.get("location") != null) && (body.get("remote") != null) && (body.get("employment_type") != null)) {
@@ -39,6 +38,6 @@ public class FindJobs {
 			String data = call.callAPI(url);
 			finalOutput = parse.Parsing(data);
 		}else if((body.get("location") != null) && (body.get)
-	}
+	}*/
 	
 }

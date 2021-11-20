@@ -18,8 +18,11 @@ public class ApiCall {
 			String line = "";
 			try {
 				URLConnection openConnection = new URL(url).openConnection();
+				openConnection.addRequestProperty("Authorization", "Token 16fa75d7c00de59be60942dc58aa75b4bce18639");
+				openConnection.setRequestProperty("Content-Type", "application/json");
+				openConnection.setRequestProperty("Accept","application/json");
+				openConnection.setDoOutput(true);
 				InputStream in = openConnection.getInputStream();
-				
 				
 				try {
 						BufferedReader buf = new BufferedReader(new InputStreamReader(in));

@@ -5,17 +5,21 @@ import java.util.ArrayList;
 public class Job {
 	
 
-	private String id;
+	private long id;
 	private String company_name;
 	private double num_employees;
 	private String location;
 	private boolean remote;
-	private boolean employment_type;
+	private String employment_type;
 	private String date;
 	private String url;
 	private ArrayList<String> keywords = new ArrayList<String>();
 	
-	public Job(String id, String company_name, double num_employees, String location, boolean remote, boolean employment_type, String url, String date, ArrayList<String> keywords) {
+	public Job() {
+		
+	}
+	
+	public Job(long id, String company_name, double num_employees, String location, boolean remote, String employment_type, String url, String date, ArrayList<String> keywords) {
 		this.id = id;
 		this.company_name = company_name;
 		this.num_employees = num_employees;
@@ -27,11 +31,11 @@ public class Job {
 		this.keywords = keywords;
 	}
 	
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	
@@ -69,11 +73,11 @@ public class Job {
 		this.remote = remote;
 	}
 	
-	public boolean isEmployment_type() {
+	public String getEmployment_type() {
 		return employment_type;
 	}
 	
-	public void setEmployment_type(boolean employment_type) {
+	public void setEmployment_type(String employment_type) {
 		this.employment_type = employment_type;
 	}
 	
