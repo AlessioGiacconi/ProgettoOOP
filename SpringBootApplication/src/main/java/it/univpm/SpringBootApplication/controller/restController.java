@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 import it.univpm.SpringBootApplication.model.City;
 import it.univpm.SpringBootApplication.service.FindJobs;
 import it.univpm.SpringBootApplication.service.Parse;
@@ -38,9 +39,14 @@ public class restController {
 		return new City();
 	}
 	
-	/*@PostMapping(value="/Filters")
+	@PostMapping(value="/Filters")
 	public ResponseEntity<Object> filteredJobList(@RequestBody JSONObject body){
 		Map<String, Object> bodyMap = Parse.JSONStringToMap(body.toJSONString());
-		
-	}*/
+		try {
+			return new ResponseEntity<>(fjobs.filteredJobs(bodyMap), HttpStatus.OK);
+		}
+		catch(ParseException e) {
+			throw new RuntimeException("Failed", e);
+		}
+	}
 }

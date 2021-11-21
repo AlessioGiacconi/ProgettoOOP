@@ -63,9 +63,9 @@ public class Parse {
 	}
 		
 		
-		public static Map<String, Object> JSONStringToMap(String jsonObject){
-			Type type = new TypeToken<Map<String,Object>>(){}.getType();
-			Map<String,Object>  map = new Gson().fromJson(jsonObject, type);
-			return map;
-		}
+	public static Map<String, Object> JSONStringToMap(String jsonObject){
+		Type type = new TypeToken<Map<String,Object>>(){}.getType();
+		Map<String,Object>  map = new Gson().fromJson(jsonObject, type);
+		return map;
+	}
 }

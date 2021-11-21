@@ -26,13 +26,8 @@ public class url {
 	}
 	
 	public String PTimeFTime (String PtFt) {
-		String time;
-		if (PtFt == "full time") {
-			time = "full+time";
-		}else if(PtFt == "contract") {
-			time = "contract";
-		}else time = " ";
-		return urlJobs + "&employment_type=" + time; 	
+		PtFt = PtFt.replace(" ", "+");
+		return urlJobs + "&employment_type=" + PtFt; 	
 	}
 	
 	public String LocRem(String loc, boolean rem) {
@@ -42,23 +37,13 @@ public class url {
 	
 	public String LocPtFt(String loc, String PtFt) {
 		loc = loc.replace(" ", "+");
-		String time;
-		if (PtFt == "full time") {
-			time = "full+time";
-		}else if(PtFt == "contract") {
-			time = "contract";
-		}else time = " ";
-		return urlJobs + "&location=" + loc + "&employment_type=" + time;
+		PtFt = PtFt.replace(" ","+");
+		return urlJobs + "&location=" + loc + "&employment_type=" + PtFt;
 	}
 	
 	public String LocRemPtFt(String loc, boolean rem, String PtFt) {
 		loc = loc.replace(" ", "+");
-		String time;
-		if (PtFt == "full time") {
-			time = "full+time";
-		}else if(PtFt == "contract") {
-			time = "contract";
-		}else time = " ";
-		return urlJobs + "&location=" + loc + "&remote=" + rem + "&employment_type=" + time;
+		PtFt = PtFt.replace(" ","+");
+		return urlJobs + "&location=" + loc + "&remote=" + rem + "&employment_type=" + PtFt;
 	}
 }
