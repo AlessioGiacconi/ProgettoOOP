@@ -46,4 +46,14 @@ public class url {
 		PtFt = PtFt.replace(" ","+");
 		return urlJobs + "&location=" + loc + "&remote=" + rem + "&employment_type=" + PtFt;
 	}
+	
+	public String NumEmp(String nEmp) {
+		return urlJobs + "&company_num_employees=" + nEmp;
+		
+	}
+	
+	public String LocNumEmp(String loc, String nEmp) {
+		loc = loc.replace(" ", "+");
+		return urlJobs + "location=" + loc + "&company_num_employees=" + nEmp;
+	}
 }

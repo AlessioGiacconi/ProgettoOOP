@@ -11,9 +11,11 @@ import java.net.URLConnection;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
+
 public class ApiCall {
 
-		public String callAPI(String url) {
+		public String callAPI(String url) throws JobsNotFoundException {
 			String data = "";
 			String line = "";
 			try {
@@ -32,9 +34,15 @@ public class ApiCall {
 				}finally {
 					in.close();
 				}
-			}catch(Exception e) {
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Jobs not found..");
+				if(data.isEmpty()) {
+					throw new JobsNotFoundException();
+				}
 			}
+			catch(IOException e) {
+				String msg = "Jobs not found, location invalid..";
+				throw new JobsNotFoundException(msg);
+			}
+			
 			return data;
 		}
 		

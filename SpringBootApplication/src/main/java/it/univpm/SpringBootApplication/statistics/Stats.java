@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import org.json.simple.parser.ParseException;
 
+import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 import it.univpm.SpringBootApplication.model.City;
 import it.univpm.SpringBootApplication.model.StatsParameters;
 import it.univpm.SpringBootApplication.service.ApiCall;
@@ -19,7 +20,7 @@ public class Stats {
 		Parse parse = new Parse();
 		Vector<String> languages = new Vector<String>();
 		
-		public ArrayList<StatsParameters> getStats() throws ParseException{
+		public ArrayList<StatsParameters> getStats() throws ParseException, JobsNotFoundException{
 			
 			call.readAPIKey();
 			Vector<String> checkedCities = c.getNames();

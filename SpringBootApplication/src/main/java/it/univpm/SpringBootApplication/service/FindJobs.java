@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import org.json.simple.parser.ParseException;
 
+import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 import it.univpm.SpringBootApplication.model.City;
 import it.univpm.SpringBootApplication.model.Job;
 
@@ -16,7 +17,7 @@ public class FindJobs {
 		City c = new City();
 		url u = new url();
 		
-	public ArrayList<Job> getJobs() throws ParseException {
+	public ArrayList<Job> getJobs() throws ParseException, JobsNotFoundException {
 			
 		call.readAPIKey();
 		Vector<String> checkedCities = c.getNames();

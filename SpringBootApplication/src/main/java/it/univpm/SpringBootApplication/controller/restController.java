@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.univpm.SpringBootApplication.exception.InvalidBodyException;
 import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 import it.univpm.SpringBootApplication.filters.Filter;
 import it.univpm.SpringBootApplication.model.City;
@@ -28,7 +29,7 @@ public class restController {
 	Stats stats = new Stats();
 	
 	@GetMapping(value="/Jobs")
-	public ResponseEntity<Object> jobList() {
+	public ResponseEntity<Object> jobList() throws JobsNotFoundException {
 		try {	
 			return new ResponseEntity<>(fjobs.getJobs(), HttpStatus.OK);
 		}catch(ParseException e) {
@@ -44,7 +45,7 @@ public class restController {
 	}
 	
 	@PostMapping(value="/Filters")
-	public ResponseEntity<Object> filteredJobList(@RequestBody JSONObject body){
+	public ResponseEntity<Object> filteredJobList(@RequestBody JSONObject body) throws InvalidBodyException, JobsNotFoundException{
 		Map<String, Object> bodyMap = Parse.JSONStringToMap(body.toJSONString());
 		try {
 			return new ResponseEntity<>(filter.filteredJobs(bodyMap), HttpStatus.OK);
@@ -55,13 +56,24 @@ public class restController {
 	}
 	
 	@GetMapping(value="/allStats")
-	public ResponseEntity<Object> statsList(){
+	public ResponseEntity<Object> statsList() throws JobsNotFoundException{
 		try {
 			return new ResponseEntity<>(stats.getStats(), HttpStatus.OK);
 		}catch(ParseException e) {
 			System.out.println(e);
 			e.printStackTrace();
 			return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
+		}
+	}
+	
+	@PostMapping(value="/filterStats")
+	public ResponseEntity<Object> filteredStats(@RequestBody JSONObject body){
+		Map<String, Object> bodyMap = Parse.JSONStringToMap(body.toJSONString());
+		try {
+			return new ResponseEntity<>(stats.filteredStats(bodyMap), HttpStatus.OK);
+		}
+		catch(ParseException e) {
+			throw new RuntimeException("Failed", e);
 		}
 	}
 }

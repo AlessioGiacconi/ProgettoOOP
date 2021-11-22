@@ -29,7 +29,7 @@ public class City {
 			}while(next != null);
 			fileR.close();
 		}catch(IOException e) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Errore lettura file..");
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "An error occured reading the file..");
 		}
 		return names;
 	}
