@@ -32,29 +32,35 @@ public class Filter {
 		Vector<String> cities = new Vector<String>();
 		cities = c.getNames();
 		boolean flag = false;
-		for(String l : cities) {
-			if (((String)body.get("location")).equals(l)) {
+		if (body.isEmpty()) {
+			finalOutput = fjobs.getJobs();
+		}else {
+			if(((String)body.get("location")).equals("")) {
+				flag = true;
+			}
+			for(String l : cities) {
+			if (((String)body.get("location")).equalsIgnoreCase(l)) {
 				flag = true;
 			}
 		}
-		if ((flag == true) && (((String)body.get("employment_type")).equals("full time")) == true || (((String)body.get("employment_type")).equals("contract")) == true){
-			if((body.get("location") != null) && (body.get("remote") != null) && (body.get("employment_type") != null)) {
+		if ((flag == true) && (((String)body.get("employment_type")).equalsIgnoreCase("full time")) == true || (((String)body.get("employment_type")).equalsIgnoreCase("contract")) == true  || (((String)body.get("employment_type")).equals(""))){
+			if((body.get("location") != "") && (body.get("remote") != null) && (body.get("employment_type") != "")) {
 			url = u.LocRemPtFt((String)body.get("location"), (boolean)body.get("remote"), (String)body.get("employment_type"));
 			data = call.callAPI(url);
 			finalOutput = parse.Parsing(data);
-		}else if((body.get("location") != null) && (body.get("remote") != null) && (body.get("employment_type") == null)) {
+		}else if((body.get("location") != "") && (body.get("remote") != null) && (body.get("employment_type") == "")) {
 			url = u.LocRem((String)body.get("location"), (boolean)body.get("remote"));
 			data = call.callAPI(url);
 			finalOutput = parse.Parsing(data);
-		}else if((body.get("location") != null) && (body.get("remote") == null) && (body.get("employment_type") == null)) {
+		}else if((body.get("location") != "") && (body.get("remote") == null) && (body.get("employment_type") == "")) {
 			url = u.Loc((String)body.get("location"));
 			data = call.callAPI(url);
 			finalOutput = parse.Parsing(data);
-		}else if((body.get("location") != null) && (body.get("remote") == null) && (body.get("employment_type") != null)) {
+		}else if((body.get("location") != "") && (body.get("remote") == null) && (body.get("employment_type") != "")) {
 			url = u.LocPtFt((String)body.get("location"), (String)body.get("employment_type"));
 			data = call.callAPI(url);
 			finalOutput = parse.Parsing(data);
-		}else if((body.get("location") == null) && (body.get("remote") != null) && (body.get("employment_type") == null)) {
+		}else if((body.get("location") == "") && (body.get("remote") != null) && (body.get("employment_type") == "")) {
 			Vector<String> checkedCities = c.getNames();
 			for(String s : checkedCities) {
 					url = u.LocRem(s, (boolean)body.get("remote"));
@@ -62,7 +68,7 @@ public class Filter {
 					ArrayList<Job> output = parse.Parsing(data);
 					finalOutput.addAll(output);
 			}
-		}else if((body.get("location") == null) && (body.get("remote") == null) && (body.get("employment_type") != null)) {
+		}else if((body.get("location") == "") && (body.get("remote") == null) && (body.get("employment_type") != "")) {
 			Vector<String> checkedCities = c.getNames();
 			for(String s : checkedCities) {
 				url = u.LocPtFt(s, (String)body.get("employment_type"));
@@ -70,18 +76,17 @@ public class Filter {
 				ArrayList<Job> output = parse.Parsing(data);
 				finalOutput.addAll(output);
 			}	
-		}else if(body.isEmpty()) {
-			finalOutput = fjobs.getJobs();
 		}
 	if(finalOutput.isEmpty()) {
 		String msg = "Jobs not found..";
 		throw new JobsNotFoundException(msg);
 	}
-	return finalOutput;
 		}else {
 			String msg = "An invalid body has been inserted..";
 			throw new InvalidBodyException(msg);
 		}
+		}
+	return finalOutput;	
 		
 		
 	}
