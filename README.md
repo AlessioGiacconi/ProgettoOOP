@@ -63,13 +63,13 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 * GET localhost:8080/cities;
 
 Questa rotta di tipo GET restituisce tutte le città presenti (per il progetto sono state scelte 5 città americane).
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/5424f5ab02400eeabd4fd3770401355832732330/EsempiRotte/rottaCities.png)
+![]()
 
 * GET localhost:8080/Jobs;
 
 Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa.
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/5424f5ab02400eeabd4fd3770401355832732330/EsempiRotte/rottaJobs.png)
+![]()
 
   
 
@@ -79,4 +79,4 @@ Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa
 
 Questa rotta di tipo GET restituisce le statistiche richieste
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/679692a8f9b1fd1fb9099ca96aa3d9c977e3debf/EsempiRotte/rottaStats%20(2).png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/6103695df87af045109ab950381a1543f9370fb9/EsempiRotte/rottaAllStats.png)
