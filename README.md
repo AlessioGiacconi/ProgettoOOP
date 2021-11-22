@@ -40,9 +40,9 @@ Questa rotta di tipo GET restituisce tutte le città presenti (per il progetto s
 
 * GET localhost:8080/Jobs;
 
-  Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa.
+Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa.
 
-  (https://github.com/AlessioGiacconi/ProgettoOOP/blob/5424f5ab02400eeabd4fd3770401355832732330/EsempiRotte/rottaJobs.png)
+(https://github.com/AlessioGiacconi/ProgettoOOP/blob/5424f5ab02400eeabd4fd3770401355832732330/EsempiRotte/rottaJobs.png)
 
   
 
