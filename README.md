@@ -22,6 +22,7 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 
 <a name="rotte"></a>
+# ROTTE
 
 |Rotte    | Metodo | Descrizione | Campo |
 |---------|------------|-------|---------|
@@ -49,3 +50,7 @@ Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa
 * POST localhost:8080/Filters;
 
 * GET localhost:8080/allStats
+
+Questa rotta di tipo GET restituisce le statistiche richieste
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/679692a8f9b1fd1fb9099ca96aa3d9c977e3debf/EsempiRotte/rottaStats%20(2).png)
