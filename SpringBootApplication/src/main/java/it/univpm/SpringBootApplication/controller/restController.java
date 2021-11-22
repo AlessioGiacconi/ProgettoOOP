@@ -17,6 +17,7 @@ import it.univpm.SpringBootApplication.filters.Filter;
 import it.univpm.SpringBootApplication.model.City;
 import it.univpm.SpringBootApplication.service.FindJobs;
 import it.univpm.SpringBootApplication.service.Parse;
+import it.univpm.SpringBootApplication.statistics.Stats;
 
 
 @RestController
@@ -24,6 +25,7 @@ public class restController {
 
 	FindJobs fjobs = new FindJobs();
 	Filter filter = new Filter();
+	Stats stats = new Stats();
 	
 	@GetMapping(value="/Jobs")
 	public ResponseEntity<Object> jobList() {
@@ -49,6 +51,17 @@ public class restController {
 		}
 		catch(ParseException e) {
 			throw new RuntimeException("Failed", e);
+		}
+	}
+	
+	@GetMapping(value="/allStats")
+	public ResponseEntity<Object> statsList(){
+		try {
+			return new ResponseEntity<>(stats.getStats(), HttpStatus.OK);
+		}catch(ParseException e) {
+			System.out.println(e);
+			e.printStackTrace();
+			return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
 		}
 	}
 }
