@@ -15,10 +15,36 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 <a name="UML"></a>
 # UML
-## Use Case Diagram
 
+## Diagramma D'Uso
 
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/main/UML/use%20case.png)
 
+# Diagramma Delle Classi 
+
+* Controller
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/controller.png)
+
+* Eccezioni 
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/eccezioni.png)
+
+* Model 
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/model.png)
+
+* Service 
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/service.png)
+
+* Filters 
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/main/UML/filter.png)
+
+* Statistics 
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/stats.png)
 
 
 <a name="rotte"></a>
