@@ -27,7 +27,7 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 |---------|------------|-------|---------|
 |  "/Jobs"      | Get  | Rotta che restituisce tutte le offerte di lavoro presenti su FindWork||
 |  "/Filters"    | Post | Rotta che restituisce le offerte di lavoro filtrate in base al parametro inserito dall'utente nel body||
-|  "/allStats"     | Post | Rotta che restituisce le statistiche per una o tutte le città in base al parametro specificato dall'utente||
+|  "/allStats"     | Get | Rotta che restituisce le statistiche per una o tutte le città in base al parametro specificato dall'utente||
 |  "/Cities" | Get  | Rotta che restituisce l'elenco delle città sulle quali si possono calcolare le statistiche||
 |  "/filterStats"    | Post | Rotta che restituisce le statistiche filtrate in base al parametro inserito dall'utente nel body||
 
