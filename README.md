@@ -88,6 +88,19 @@ Questa rotta di tipo POST restituisce le richieste con gli opportuni filtri.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/365fb9dfeaad464dc984dfc79082d353ba86e21d/EsempiRotte/rottaFilters.png)
   
+Possibilità di filtraggio e utilizzo : 
+ 
+{
+  
+    "location" : "Chicago", --> filtraggio in base alla città scelta
+  
+    "remote" : null, --> lavoro in remoto o no con le seguenti scelte null, true e false.
+  
+    "employment_type" : "full time" --> lavoro full time o part time
+  
+}
+  
+  
   
 
 <h3>GET localhost:8080/allStats</h3>
