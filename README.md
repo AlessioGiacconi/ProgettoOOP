@@ -154,7 +154,7 @@ Attenzione:
 <a name="spoftware utilizzati"></a>
     
   
-  # Software utilizzati
+  # Software utilizzati 
   
 * [Eclipse](https://www.eclipse.org/downloads/) - Ambiente di sviluppo
   
