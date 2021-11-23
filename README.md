@@ -46,7 +46,7 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/stats.png)
 
-# Diagramma Delle Classi 
+# Diagrammi Delle Sequenze 
 
 * GET/Cities
 
