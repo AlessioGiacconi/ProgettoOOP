@@ -66,12 +66,15 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 ## Esempi di chiamate:
 
-<h3>GET localhost:8080/cities;</h3>
+<h3>GET localhost:8080/cities</h3>
 
 Questa rotta di tipo GET restituisce tutte le città presenti (per il progetto sono state scelte 5 città americane).
+
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/365fb9dfeaad464dc984dfc79082d353ba86e21d/EsempiRotte/rottaCities.png)
 
-* GET localhost:8080/Jobs;
+
+
+<h3>GET localhost:8080/Jobs</h3>
 
 Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa.
 
@@ -79,11 +82,12 @@ Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa
 
   
 
-<h3>POST localhost:8080/Filters;/<h3>
+<h3>POST localhost:8080/Filters/<h3>
 
 Questa rotta di tipo POST restituisce le richieste con gli opportuni filtri.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/365fb9dfeaad464dc984dfc79082d353ba86e21d/EsempiRotte/rottaFilters.png)
+  
   
 
 <h3>GET localhost:8080/allStats</h3>
@@ -97,6 +101,7 @@ L'applicazione permette di generare delle statistiche sui lavori trovati :
  Tipologia del lavoro --> numero di lavori in remoto o non con le relative percentuali.
 
  Possibilità di generare statistiche utilizzando altri linguaggi oltre al Phyton --> Phyton, Javascript, Kotlin, Django, React.
+  
   
 
 <h3>POST localhost:8080/filterStats</h3>
