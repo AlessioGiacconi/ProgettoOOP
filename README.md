@@ -142,6 +142,8 @@ Attenzione:
   
 <a name="eccezioni"></a>
   
+  # Eccezioni
+  
   * JobsNotFoundException nel caso in cui il lavoro non viene trovato.
   
   * InvalidBodyException nel caso in cui sono stati inseriti parametri sbagliati nel body.
