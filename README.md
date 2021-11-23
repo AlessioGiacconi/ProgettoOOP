@@ -4,6 +4,7 @@
 * [Introduzione](#intro)
 * [Diagrammi UML](#UML)
 * [Rotte](#rotte)
+* [Eccezioni](#teccezioni)
 * [Test](#test)
 * [Software utilizzati](#software)
 * [Autori](#Autori)
@@ -126,11 +127,24 @@ Questa rotta restituisce le statistiche filtrate in base al parametro inserito
 Attenzione: 
 
 {
+  
 
-"location" : "Los Angeles", --> si può scegliere tra le 5 città presenti nell'applicazione (Los Angeles, Chicago, New York, San Francisco, Seattle).
+ "location" : "Los Angeles", --> si può scegliere tra le 5 città presenti nell'applicazione (Los Angeles, Chicago, New York, San Francisco, Seattle).
     
-"num_employees" : "11-50", --> rappresenta il numero di dipendenti (1-10, 11-50, 51-100, 101-250, >250).
+ "num_employees" : "11-50", --> rappresenta il numero di dipendenti (1-10, 11-50, 51-100, 101-250, >250).
     
-"date" : "2020-10-01" --> rappresenta la data di annuncio riguardante il lavoro, l'applicazione accetta il formato yyyy-mm-dd.
+ "date" : "2020-10-01" --> rappresenta la data di annuncio riguardante il lavoro, l'applicazione accetta il formato yyyy-mm-dd.
+  
     
 }
+  
+  
+  
+<a name="eccezioni"></a>
+  
+  * JobsNotFoundException nel caso in cui il lavoro non viene trovato.
+  
+  * InvalidBodyException nel caso in cui sono stati inseriti parametri sbagliati nel body.
+  
+  * StatsErrorException nel caso in cui sono stati inseriti parametri sbagliati durante la richiesta delle stats.
+  
