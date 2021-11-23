@@ -77,6 +77,13 @@ public class Filter {
 				ArrayList<Job> output = parse.Parsing(data);
 				finalOutput.addAll(output);
 			}	
+		}else if((body.get("location") == "") && (body.get("remote") != null) && (body.get("employment_type") != "")) {
+			for(String s : cities) {
+				url = u.LocRemPtFt(s, (boolean)body.get("remote"), (String)body.get("employment_type"));
+				data = call.callAPI(url);
+				ArrayList<Job> output = parse.Parsing(data);
+				finalOutput.addAll(output);
+			}
 		}
 	if(finalOutput.isEmpty()) {
 		String msg = "Jobs not found..";
@@ -111,6 +118,10 @@ public class Filter {
 					flag = true;
 				}
 			}
+			if(((String)body.get("date")).length() > 10) {
+				String msg = "An invalid body has been inserted..";
+				throw new InvalidBodyException(msg);
+			}
 		if((flag == true) && (((String)body.get("num_employees")).equals("1-10") == true || ((String)body.get("num_employees")).equals("11-50") == true || ((String)body.get("num_employees")).equals("51-100") == true || ((String)body.get("num_employees")).equals("101-250") == true || ((String)body.get("num_employees")).equals("") == true)){
 			if((body.get("location") != "") && (body.get("num_employees") != "") && (body.get("date") != "")){
 			url = u.LocNumEmp((String)body.get("location"), (String)body.get("num_employees"));
@@ -142,7 +153,15 @@ public class Filter {
 			url = u.Loc((String)body.get("location"));
 			data = call.callAPI(url);
 			finalOutputStats = parse.StatsParsing(data, (String)body.get("location"), (String)body.get("date"));
+		}else if((body.get("location") == "") && (body.get("num_employees") == "") && (body.get("date") != "")) {
+			for(String s : cities) {
+				url = u.Loc(s);
+				data = call.callAPI(url);
+				ArrayList<StatsParameters> OutputStats = parse.StatsParsing(data, s, (String)body.get("date"));
+				finalOutputStats.addAll(OutputStats);
+			}
 		}
+			
 		if(finalOutputStats.isEmpty()) {
 			String msg = "An error occured during elaboration of stats..";
 			throw new StatsErrorException(msg);
