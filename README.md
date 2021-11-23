@@ -150,3 +150,16 @@ Attenzione:
   
   * StatsErrorException nel caso in cui sono stati inseriti parametri sbagliati durante la richiesta delle stats.
   
+  
+<a name="spoftware utilizzati"></a>
+    
+  
+  # Software utilizzati
+  
+* [Eclipse](https://www.eclipse.org/downloads/) - Ambiente di sviluppo
+  
+* [Draw.io](https://www.diagrams.net/) - Software per la realizzazione dei diagrammi UML
+  
+* [Spring Boot](https://spring.io/projects/spring-boot) - Framework per sviluppo di applicazioni in Java
+  
+* [Postman](https://www.postman.com/) - Ambiente di sviluppo API per effettuare richieste
