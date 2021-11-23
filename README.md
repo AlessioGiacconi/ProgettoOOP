@@ -151,7 +151,7 @@ Attenzione:
   * StatsErrorException nel caso in cui sono stati inseriti parametri sbagliati durante la richiesta delle stats.
   
   
-<a name="spoftware utilizzati"></a>
+<a name="software utilizzati"></a>
     
   
   # Software utilizzati 
