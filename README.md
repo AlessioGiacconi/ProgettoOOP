@@ -91,9 +91,9 @@ Questa rotta di tipo GET restituisce le statistiche richieste
 
 L'applicazione permette di generare delle statistiche sui lavori trovati : 
 
-- Tipologia del lavoro --> numero di lavori in remoto o non con le relative percentuali.
+ Tipologia del lavoro --> numero di lavori in remoto o non con le relative percentuali.
 
-- Possibilità di generare statistiche utilizzando altri linguaggi oltre al Phyton --> Phyton, Javascript, Kotlin, Django, React.
+ Possibilità di generare statistiche utilizzando altri linguaggi oltre al Phyton --> Phyton, Javascript, Kotlin, Django, React.
 
 * POST localhost:8080/filterStats
 
