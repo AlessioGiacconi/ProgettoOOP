@@ -22,15 +22,15 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 # Diagramma Delle Classi 
 
-<h3></h3> Controller
+<h3>Controller</h3>
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/controller.png)
 
-<h3> Eccezioni 7h3>
+<h3>Eccezioni</h3>
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/eccezioni.png)
 
-<h3> Model /h3>  
+<h3>Model</h3>  
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/model.png)
 
