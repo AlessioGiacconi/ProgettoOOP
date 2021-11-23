@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.univpm.SpringBootApplication.exception.InvalidBodyException;
 import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
+import it.univpm.SpringBootApplication.exception.StatsErrorException;
 import it.univpm.SpringBootApplication.filters.Filter;
 import it.univpm.SpringBootApplication.model.City;
 import it.univpm.SpringBootApplication.service.FindJobs;
@@ -67,10 +68,10 @@ public class restController {
 	}
 	
 	@PostMapping(value="/filterStats")
-	public ResponseEntity<Object> filteredStats(@RequestBody JSONObject body){
+	public ResponseEntity<Object> filteredStats(@RequestBody JSONObject body) throws JobsNotFoundException, InvalidBodyException, java.text.ParseException, StatsErrorException{
 		Map<String, Object> bodyMap = Parse.JSONStringToMap(body.toJSONString());
 		try {
-			return new ResponseEntity<>(stats.filteredStats(bodyMap), HttpStatus.OK);
+			return new ResponseEntity<>(filter.filteredStats(bodyMap), HttpStatus.OK);
 		}
 		catch(ParseException e) {
 			throw new RuntimeException("Failed", e);

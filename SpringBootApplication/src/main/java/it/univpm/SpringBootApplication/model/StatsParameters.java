@@ -11,14 +11,23 @@ public class StatsParameters {
 	private double perc_remote_true;
 	private double perc_remote_false;
 	private String high_requested_language;
-		
-	Vector<String> languages = new Vector<String>();
+	private String from_date;
 	
 	public StatsParameters() {
 		
 	}
 	
 	public StatsParameters(String location, int cont_results, int n_remote_true, int n_remote_false, double perc_remote_true, double perc_remote_false, String high_requested_language) {
+		this.location = location;
+		this.cont_results = cont_results;
+		this.n_remote_true = n_remote_true;
+		this.n_remote_false = n_remote_false;
+		this.perc_remote_true = perc_remote_true;
+		this.perc_remote_false = perc_remote_false;
+		this.high_requested_language = high_requested_language;
+	}
+	
+	public StatsParameters(String location, int cont_results, int n_remote_true, int n_remote_false, double perc_remote_true, double perc_remote_false, String high_requested_language, String from_date) {
 		
 		this.location = location;
 		this.cont_results = cont_results;
@@ -27,6 +36,7 @@ public class StatsParameters {
 		this.perc_remote_true = perc_remote_true;
 		this.perc_remote_false = perc_remote_false;
 		this.high_requested_language = high_requested_language;	
+		this.from_date = from_date;
 	}
 	
 	
@@ -87,6 +97,12 @@ public class StatsParameters {
 		this.high_requested_language = high_requested_language;
 	}
 	
-	
+	public String getFrom_date() {
+		return from_date;
+	}
+
+	public void setFrom_date(String from_date) {
+		this.from_date = from_date;
+	}
 	
 }

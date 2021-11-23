@@ -54,6 +54,6 @@ public class url {
 	
 	public String LocNumEmp(String loc, String nEmp) {
 		loc = loc.replace(" ", "+");
-		return urlJobs + "location=" + loc + "&company_num_employees=" + nEmp;
+		return urlJobs + "&location=" + loc + "&company_num_employees=" + nEmp;
 	}
 }
