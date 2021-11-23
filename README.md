@@ -46,7 +46,11 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/stats.png)
 
+# Diagrammi Delle Sequenze 
 
+* GET/Cities
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/921ac2be394cc942e7d0fd624ce9f97738f46fe9/UML/DiagrammaSeqCity.png)
 <a name="rotte"></a>
 # ROTTE
 
