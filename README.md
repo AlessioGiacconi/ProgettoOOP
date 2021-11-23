@@ -87,7 +87,13 @@ Questa rotta di tipo POST restituisce le richieste con gli opportuni filtri.
 
 Questa rotta di tipo GET restituisce le statistiche richieste
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/6103695df87af045109ab950381a1543f9370fb9/EsempiRotte/rottaAllStats.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/6103695df87af045109ab950381a1543f9370fb9/EsempiRotte/rottaAllStats.png) 
+
+L'applicazione permette di generare delle statistiche sui lavori trovati : 
+
+- Tipologia del lavoro --> numero di lavori in remoto o non con le relative percentuali.
+
+- Possibilità di generare statistiche utilizzando altri linguaggi oltre al Phyton --> Phyton, Javascript, Kotlin, Django, React.
 
 * POST localhost:8080/filterStats
 
