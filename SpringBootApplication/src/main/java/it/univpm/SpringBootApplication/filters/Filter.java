@@ -90,8 +90,7 @@ public class Filter {
 		throw new JobsNotFoundException(msg);
 	}
 		}else {
-			String msg = "An invalid body has been inserted..";
-			throw new InvalidBodyException(msg);
+			throw new InvalidBodyException("An invalid body has been inserted..");
 		}
 		}
 	return finalOutput;	
