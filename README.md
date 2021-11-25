@@ -85,7 +85,8 @@ Questa rotta di tipo GET restituisce tutti gli annunci di lavoro relativi alle c
 
   
 
-<h3>POST localhost:8080/Filters/<h3>
+<h3>POST localhost:8080/Filters</h3>
+  
 
 Questa rotta di tipo POST restituisce gli annunci di lavoro filtrati secondo quanto è stato inserito nel body.
 
