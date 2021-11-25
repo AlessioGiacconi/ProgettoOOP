@@ -95,17 +95,17 @@ Possibilità di filtraggio e utilizzo :
  
 {
   
-    "location" : "Chicago", --> filtraggio in base alla città scelta
+"location" : "Chicago", --> filtraggio in base alla città scelta
   
-    "remote" : null, --> lavoro in remoto o no con le seguenti scelte null, true e false.
+"remote" : null, --> lavoro in remoto o no con le seguenti scelte null, true e false.
   
-    "employment_type" : "full time" --> lavoro full time o part time
+"employment_type" : "full time" --> lavoro full time o part time
   
 }
   
-  N.B. All'utente è consentito anche lasciare il body vuoto: in tal caso verrano restituiti i risultati relativi a tutte le città senza essere filtrati in alcun modo.
+N.B. All'utente è consentito anche lasciare il body vuoto: in tal caso verrano restituiti i risultati relativi a tutte le città senza essere filtrati in alcun modo.
   
-  N.B. L'utente può anche inserire una stringa vuota ("") nei campi "location" oppure "employment_type". I risultati verranno comunque filtrati.
+N.B. L'utente può anche inserire una stringa vuota ("") nei campi "location" oppure "employment_type". I risultati verranno comunque filtrati.
   
   
 
