@@ -61,7 +61,7 @@ parametri di ricerca illustrati a seguire.
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/e8bb3f277994cb088d04f855cefb90f61435ed61/UML/sequenza%20jobs.drawio.png)
 
 
-<h3>GET/Filters</h3>
+<h3>POST/Filters</h3>
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/e8bb3f277994cb088d04f855cefb90f61435ed61/UML/sequenza%20filtri.drawio.png)
 
