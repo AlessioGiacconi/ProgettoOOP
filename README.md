@@ -25,29 +25,33 @@ parametri di ricerca illustrati a seguire.
 
 # Diagramma Delle Classi 
 
+<h3>Applicationr</h3>
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/ApplicationClass.png)
+
 <h3>Controller</h3>
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/controller.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/controllerClass.png)
 
 <h3>Exceptions</h3>
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/eccezioni.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/exceptionsClass.png)
 
 <h3>Model</h3>  
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/model.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/modelClass.png)
 
 <h3>Service</h3> 
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/service.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/serviceClass.png)
 
 <h3>Filters</h3> 
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/main/UML/filter.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/filterClass.png)
 
 <h3>Statistics</h3>
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/500909409e3a403329854468eedc33e67bc3b1d0/UML/stats.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/9e673b09220c8ea98e5cba30792717ea45bf3466/UML/classStats.png)
 
 # Diagrammi Delle Sequenze 
 
