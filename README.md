@@ -65,6 +65,11 @@ parametri di ricerca illustrati a seguire.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/e8bb3f277994cb088d04f855cefb90f61435ed61/UML/sequenza%20filtri.drawio.png)
 
+
+<h3>GET/allStats</h3>
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/4d56df2c6bfa11c1556d420b8ec5b6ec2cf5db3a/UML/stats.drawio.png)
+
 <a name="rotte"></a>
 
 # ROTTE
