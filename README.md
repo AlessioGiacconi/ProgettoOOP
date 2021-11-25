@@ -4,7 +4,7 @@
 * [Introduzione](#intro)
 * [Diagrammi UML](#UML)
 * [Rotte](#rotte)
-* [Eccezioni](#teccezioni)
+* [Eccezioni](#eccezioni)
 * [Test](#test)
 * [Software utilizzati](#software)
 * [Autori](#Autori)
@@ -169,3 +169,11 @@ Attenzione:
 * [Spring Boot](https://spring.io/projects/spring-boot) - Framework per sviluppo di applicazioni in Java
   
 * [Postman](https://www.postman.com/) - Ambiente di sviluppo API per effettuare richieste
+  
+  
+  # Autori
+  
+  | Autori | Contributo | Email |
+  |--------|------------|-------|
+  | Giacconi Alessio | 50% | s1092675@studenti.univpm.it |
+  | Dedja Erxhes | 50% | s1078853@studenti.univpm.it |
