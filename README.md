@@ -12,7 +12,9 @@
 <a name="intro"></a>
 ##  Introduzione
 L'applicazione consiste nell'implementazione di un sistema che permette la ricerca di offerte di lavoro basate sull'utilizzo
-del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
+del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev). La ricerca restituisce gli annunci di lavoro e le 
+statistiche riguardanti 5 grandi città americane. Sia annunci che statistiche potranno poi essere filtrati secondo alcuni 
+parametri di ricerca illustrati a seguire.
 
 <a name="UML"></a>
 # UML
@@ -171,6 +173,7 @@ Attenzione:
 * [Postman](https://www.postman.com/) - Ambiente di sviluppo API per effettuare richieste
   
   
+  <a name="autori"></a>  
   # Autori
   
   | Autori | Contributo | Email |
