@@ -53,7 +53,17 @@ parametri di ricerca illustrati a seguire.
 
 <h3>GET/Cities</h3>
 
-![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/921ac2be394cc942e7d0fd624ce9f97738f46fe9/UML/DiagrammaSeqCity.png)
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/59e548f87c538b86f183dee4ac7bdf3789598c80/UML/sequenceCity.png)
+
+
+<h3>GET/Jobs</h3>
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/e8bb3f277994cb088d04f855cefb90f61435ed61/UML/sequenza%20jobs.drawio.png)
+
+
+<h3>GET/Filters</h3>
+
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/e8bb3f277994cb088d04f855cefb90f61435ed61/UML/sequenza%20filtri.drawio.png)
 
 <a name="rotte"></a>
 
