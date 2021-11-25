@@ -29,7 +29,7 @@ parametri di ricerca illustrati a seguire.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/controller.png)
 
-<h3>Eccezioni</h3>
+<h3>Exceptions</h3>
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8890b7da52d0e514277fb3a7e9992c916b52efd9/UML/eccezioni.png)
 
