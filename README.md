@@ -160,7 +160,7 @@ Attenzione:
   * StatsErrorException nel caso in cui vengano restituiti risultati errati durante la richiesta delle stats.
   
   
-<a name="software utilizzati"></a>
+<a name="software"></a>
     
   
   # Software utilizzati 
