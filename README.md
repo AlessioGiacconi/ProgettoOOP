@@ -77,7 +77,7 @@ Questa rotta di tipo GET restituisce tutte le città presenti (per il progetto s
 
 <h3>GET localhost:8080/Jobs</h3>
 
-Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa.
+Questa rotta di tipo GET restituisce tutti gli annunci di lavoro relativi alle città monitorate e contenenti la parola python.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/365fb9dfeaad464dc984dfc79082d353ba86e21d/EsempiRotte/rottaJobs.png)
 
@@ -85,7 +85,7 @@ Questa rotta di tipo GET restituisce tutti i lavori con la parola phyotn inclusa
 
 <h3>POST localhost:8080/Filters/<h3>
 
-Questa rotta di tipo POST restituisce le richieste con gli opportuni filtri.
+Questa rotta di tipo POST restituisce gli annunci di lavoro filtrati secondo quanto è stato inserito nel body.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/365fb9dfeaad464dc984dfc79082d353ba86e21d/EsempiRotte/rottaFilters.png)
   
@@ -109,7 +109,7 @@ Possibilità di filtraggio e utilizzo :
 
 <h3>GET localhost:8080/allStats</h3>
 
-Questa rotta di tipo GET restituisce le statistiche richieste
+Questa rotta di tipo GET restituisce tutte le statistiche relative alle 5 città monitorate.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/6103695df87af045109ab950381a1543f9370fb9/EsempiRotte/rottaAllStats.png) 
 
@@ -123,7 +123,7 @@ L'applicazione permette di generare delle statistiche sui lavori trovati :
 
 <h3>POST localhost:8080/filterStats</h3>
 
-Questa rotta restituisce le statistiche filtrate in base al parametro inserito
+Questa rotta restituisce le statistiche filtrate in base ai parametri inseriti nel body.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/8811b8fe63ec16ba6c5641fefb66706c105d9f22/EsempiRotte/rottafilterStats.png)
 
