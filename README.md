@@ -59,11 +59,11 @@ del linguaggio phyton sfruttando l'API [Findwork](https://findwork.dev).
 
 |Rotte    | Metodo | Descrizione | Campo |
 |---------|------------|-------|---------|
-|  "/Jobs"      | Get  | Rotta che restituisce tutte le offerte di lavoro presenti su FindWork||
-|  "/Filters"    | Post | Rotta che restituisce le offerte di lavoro filtrate in base al parametro inserito dall'utente nel body||
-|  "/allStats"     | Get | Rotta che restituisce le statistiche per una o tutte le città in base al parametro specificato dall'utente||
-|  "/Cities" | Get  | Rotta che restituisce l'elenco delle città sulle quali si possono calcolare le statistiche||
-|  "/filterStats"    | Post | Rotta che restituisce le statistiche filtrate in base al parametro inserito dall'utente nel body||
+|  "/Jobs"      | Get  | Rotta che restituisce tutte le offerte di lavoro presenti su FindWork relative alle città monitorate||
+|  "/Filters"    | Post | Rotta che restituisce le offerte di lavoro filtrate in base ai parametri inseriti dall'utente nel body||
+|  "/allStats"     | Get | Rotta che restituisce le statistiche per tutte le città monitorate||
+|  "/Cities" | Get  | Rotta che restituisce l'elenco delle città sulle quali sono effettuate le ricerche di annunci||
+|  "/filterStats"    | Post | Rotta che restituisce le statistiche filtrate in base ai parametri inseriti dall'utente nel body||
 
 ## Esempi di chiamate:
 
@@ -101,6 +101,9 @@ Possibilità di filtraggio e utilizzo :
   
 }
   
+  N.B. All'utente è consentito anche lasciare il body vuoto: in tal caso verrano restituiti i risultati relativi a tutte le città senza essere filtrati in alcun modo.
+  
+  N.B. L'utente può anche inserire una stringa vuota ("") nei campi "location" oppure "employment_type". I risultati verranno comunque filtrati.
   
   
 
@@ -138,17 +141,20 @@ Attenzione:
     
 }
   
+  N.B. All'utente è consentito anche lasciare il body vuoto: in tal caso verrano restituiti i risultati relativi a tutte le città senza essere filtrati in alcun modo.
+  
+  N.B. L'utente può lasciare una stringa vuota ("") in ciascuno dei tre campi. I risultati saranno comunque filtrati nel modo desiderato.
   
   
 <a name="eccezioni"></a>
   
   # Eccezioni
   
-  * JobsNotFoundException nel caso in cui il lavoro non viene trovato.
+  * JobsNotFoundException nel caso in cui non venga trovato alcun annuncio in base ai parametri immessi.
   
   * InvalidBodyException nel caso in cui sono stati inseriti parametri sbagliati nel body.
   
-  * StatsErrorException nel caso in cui sono stati inseriti parametri sbagliati durante la richiesta delle stats.
+  * StatsErrorException nel caso in cui vengano restituiti risultati errati durante la richiesta delle stats.
   
   
 <a name="software utilizzati"></a>
