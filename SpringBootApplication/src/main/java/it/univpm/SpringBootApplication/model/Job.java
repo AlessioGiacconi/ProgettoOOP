@@ -185,7 +185,7 @@ public class Job {
 	}
 	
 	/**
-	 * metodo che permette di impopstare il numero di lavoratori
+	 * metodo che permette di impostare il numero di lavoratori
 	 * @return employment_type
 	 */
 	
@@ -195,7 +195,7 @@ public class Job {
 	
 	/**
 	 * metodo che restituisce la data di annuncio del lavoro
-	 * @return datee
+	 * @return date
 	 */
 	
 	
@@ -223,7 +223,7 @@ public class Job {
 	}
 	
 	/**
-	 * metodo che serve per impostare valore attributo url
+	 * metodo che serve per impostare il valore attributo url
 	 * @return url
 	 */
 	
@@ -241,7 +241,7 @@ public class Job {
 	}
 	
 	/**
-	 * metodo che serve perimpostare il linguaggio desiderato
+	 * metodo che serve per impostare il linguaggio desiderato
 	 * @return keywords
 	 */
 	public void setKeywords(ArrayList<String> keywords) {
