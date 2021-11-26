@@ -186,7 +186,7 @@ Attenzione:
  
  # Test
   
-  Per testare il corretto funzionamento di alcune delle funzionalità del programma abbiamo anche programmato 
+  Per provare il corretto funzionamento di alcune delle funzionalità del programma abbiamo anche programmato 
   3 unit test tramite il framework di testing JUnit 5.
   
   * CitiesTest: si occupa di verificare che la lettura delle città monitorate dalla SpringBoot Application,
