@@ -13,6 +13,12 @@ import org.springframework.web.server.ResponseStatusException;
 
 import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 
+/**
+        * Classe che implementa la chiamata alla API di FindWork
+	*@author Alessio Giacconi
+        *@author Erxhes Dedja
+        **/
+
 public class ApiCall {
 
 		public String callAPI(String url) throws JobsNotFoundException {
@@ -46,6 +52,10 @@ public class ApiCall {
 			return data;
 		}
 		
+	        /**
+                * metodo che permette di utilizzare l'APIKey presente nel fil "doc"
+                * @return APIKey
+                **/
 		
 		public String readAPIKey() {
 			String APIKey;
