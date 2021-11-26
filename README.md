@@ -74,6 +74,10 @@ parametri di ricerca illustrati a seguire.
 
 ![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/4d56df2c6bfa11c1556d420b8ec5b6ec2cf5db3a/UML/stats.drawio.png)
 
+<h3>POST/filterStats</h3>
+
+
+
 <a name="rotte"></a>
 
 # ROTTE
@@ -177,7 +181,26 @@ Attenzione:
   * InvalidBodyException nel caso in cui sono stati inseriti parametri sbagliati nel body.
   
   * StatsErrorException nel caso in cui vengano restituiti risultati errati durante la richiesta delle stats.
+
+<a name="test"></a>
+ 
+ # Test
   
+  Per testare il corretto funzionamento di alcune delle funzionalità del programma abbiamo anche programmato 
+  3 unit test tramite il framework di testing JUnit 5.
+  
+  * CitiesTest: si occupa di verificare che la lettura delle città monitorate dalla SpringBoot Application,
+                contenute in un file Cities.txt, avvenga correttamente.
+                
+  * FilterJobsException: il suo compito è di verificare che la ricerca effettuata inserendo particolari filtri
+                         ritorni risultati validi. Nel caso in cui il body della richieta non fosse stato 
+                         sarebbe stata lanciata una ResponseStatusException seguita da una InvalidBodyException.
+                         Nel caso in cui invece la ricerca effettuata tramite quei filtri non avesse dovuto avere
+                         risultati avrei ottenuto una JobsNotFoundException.
+                         
+  * InvalidBodyException: questo test infine verifica che, inseriti nel body della richiesta dei parametri non 
+                          non validi per la ricerca, venga lanciata una ResponseStatusException che sarà 
+                          immediatamente seguita da una InvalidBodyException.
   
 <a name="software"></a>
     
@@ -191,6 +214,8 @@ Attenzione:
 * [Spring Boot](https://spring.io/projects/spring-boot) - Framework per sviluppo di applicazioni in Java
   
 * [Postman](https://www.postman.com/) - Ambiente di sviluppo API per effettuare richieste
+
+* [JUnit 5](https://junit.org/junit5/) - Framework per lo sviluppo di test in Java
   
   
   <a name="autori"></a>  
