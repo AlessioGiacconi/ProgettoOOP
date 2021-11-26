@@ -8,6 +8,13 @@ import java.util.Vector;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+
+/** classe che modella le città
+ * 
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ */
+
 public class City {
 		
 	private String description;
@@ -16,6 +23,11 @@ public class City {
 	public City() {
 		this.setDescription("Monitored cities:");
 	}
+	
+/** metodo che permette di ottente il nome della città tra le 5 presenti nell'archivio.
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ */
 	
 	public Vector<String> getNames(){
 		String next;
