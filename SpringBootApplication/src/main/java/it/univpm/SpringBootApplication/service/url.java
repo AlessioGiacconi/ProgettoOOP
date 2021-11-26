@@ -1,5 +1,12 @@
 package it.univpm.SpringBootApplication.service;
 
+/**
+ * Classe che genera gli url per acquisire i dati dall'API di FindWork con la parola phyton
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ *
+ */
+
 public class url {
 	
 	private static String urlJobs = "https://findwork.dev/api/jobs/?search=python&source=";
