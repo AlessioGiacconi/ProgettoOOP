@@ -9,6 +9,12 @@ import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 import it.univpm.SpringBootApplication.model.City;
 import it.univpm.SpringBootApplication.model.Job;
 
+/**
+ * Classe per la ricerca di tutte le offerte di lavoro.
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ */
+
 
 public class FindJobs {
 	
@@ -16,6 +22,12 @@ public class FindJobs {
 		Parse parse = new Parse();
 		City c = new City();
 		url u = new url();
+	
+	/**
+        * Metodo che permette di ottenere tutte le offerte di lavoro a partire dall'url che forniamo.
+        * @return allJobs tutti i lavori trovati
+        * @throws NoJobFoundException Eccezione personalizzata nel caso in cui il lavoro non fosse trovato
+        */
 		
 	public ArrayList<Job> getJobs() throws ParseException, JobsNotFoundException {
 			
