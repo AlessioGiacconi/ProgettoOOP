@@ -76,6 +76,8 @@ parametri di ricerca illustrati a seguire.
 
 <h3>POST/filterStats</h3>
 
+![](https://github.com/AlessioGiacconi/ProgettoOOP/blob/bf2a65a13019b8fd8a7515a15495053394a10e23/UML/filteredStats.drawio.png)
+
 
 
 <a name="rotte"></a>
