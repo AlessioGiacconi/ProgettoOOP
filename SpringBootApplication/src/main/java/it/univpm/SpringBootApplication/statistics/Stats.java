@@ -12,6 +12,12 @@ import it.univpm.SpringBootApplication.service.ApiCall;
 import it.univpm.SpringBootApplication.service.Parse;
 import it.univpm.SpringBootApplication.service.url;
 
+/**
+Classe che calcola le statistiche in base alle richieste possibili
+@author Alessio Giacconi
+@author Erxhes Dedja
+**/
+
 public class Stats {
 
 		ApiCall call = new ApiCall();
