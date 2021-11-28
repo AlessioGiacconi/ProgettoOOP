@@ -8,6 +8,12 @@ import java.util.Vector;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+/**
+Classe utilizata la tipologia di linguaggio richiesto nell'offerta di lavoro.
+@author Alessio Giacconi
+@author Erxhes Dedja
+**/
+
 public class Languages {
 
 	Vector<String> languages = new Vector<String>();
