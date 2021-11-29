@@ -12,6 +12,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
+/**
+ * Classe usata per testare il funzionamento della classe Model City.
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ */
+
+
+
 public class CitiesTest {
 
 		private City c = new City();
