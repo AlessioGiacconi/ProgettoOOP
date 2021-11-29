@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Classe usata per testare il funzionamento della classe Model City.
+ * Verifica che la lettura delle città monitorate dall'applicazione, contenute in un file Cities.txt, avvenga correttamente.
  * @author Alessio Giacconi
  * @author Erxhes Dedja
  */
