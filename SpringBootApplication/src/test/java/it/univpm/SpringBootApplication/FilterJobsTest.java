@@ -18,6 +18,13 @@ import it.univpm.SpringBootApplication.exception.JobsNotFoundException;
 import it.univpm.SpringBootApplication.filters.Filter;
 import it.univpm.SpringBootApplication.service.Parse;
 
+/**
+ * Classe di test al metodo filteredJobs di Filter.
+ * Verifico se, inserendo dei filtri (qualsiasi) e facendo la chiamata a filteredJobs, ottengo dei risultati non nulli.
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ */
+
 public class FilterJobsTest {
 	
 	JSONObject body = new JSONObject();
