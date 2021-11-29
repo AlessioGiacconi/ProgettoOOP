@@ -15,6 +15,15 @@ import org.springframework.web.server.ResponseStatusException;
 import it.univpm.SpringBootApplication.filters.Filter;
 import it.univpm.SpringBootApplication.service.Parse;
 
+
+/**
+ * Classe usata per testare l'eccezione nel caso in cui il body inserito dall'utente non è corretto.
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ */
+
+
+
 public class InvalidBodyExceptionTest {
 
 	JSONObject body = new JSONObject();
@@ -37,6 +46,8 @@ public class InvalidBodyExceptionTest {
 	@Test
 	@DisplayName("Test Invalid Body Exception")
 	void test() {
+	//Se il body inserito è sbagliato.
+	//Viene lanciata l'eccezione InvalidBodyException
 		assertThrows(ResponseStatusException.class, ()->filter.filteredJobs(bodyMap));
 	}
 }
