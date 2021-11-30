@@ -21,9 +21,22 @@ import it.univpm.SpringBootApplication.model.StatsParameters;
 import it.univpm.SpringBootApplication.statistics.Languages;
 
 
+/**
+ * Classe per effettuare conversioni e la lettura del formato JSON.
+ * @author Alessio Giacconi
+ * @author Erxhes Dedja
+ **/
+
 public class Parse {
 		
 		Languages languages = new Languages();
+	
+	       /**
+               * Metodo per parsare i dati.
+	       * @return array.
+               * @throws ParseException.
+               **/
+	       
 	
 		public ArrayList<Job> Parsing(String data) throws ParseException {
 			JSONObject obj = new JSONObject();
@@ -69,12 +82,24 @@ public class Parse {
 			return array;
 	}
 		
+	/**
+	 * Metodo statico per la conversione di un JSONString in MAP
+	 * @param jsonString JSONString da convertire
+	 * @return Map Map derivante dalla conversione
+	 */
 		
 	public static Map<String, Object> JSONStringToMap(String jsonObject){
 		Type type = new TypeToken<Map<String,Object>>(){}.getType();
 		Map<String,Object>  map = new Gson().fromJson(jsonObject, type);
 		return map;
 	}
+	
+	/**Metodo ottenere le statistiche di un lavoro.
+	 * @param location città tra quelle presenti su cui è stata fatta la statistica
+	 * @throws ParseException se il parsing del body porta a delle eccezioni.
+	 * @throws JobsNotFoundException se il lavoro non è stato trovato.
+	 * @return Statsarray ritorna le statistiche riguardanti le offerte di lavoro una volta scelta la città
+	 */
 	
 	public ArrayList<StatsParameters> StatsParsing(String data, String location) throws ParseException, JobsNotFoundException{
 		JSONObject obj = new JSONObject();
@@ -137,6 +162,14 @@ public class Parse {
 		StatsArray.add(sp);
 		return StatsArray;
 	}
+	
+	/**Metodo ottenere il filtraggio delle statistiche di un lavoro.
+	 * @param location città tra quelle presenti su cui è stata fatta la statistica
+	 * @param date_posted data di annuncio dell'offerta di lavoro.
+	 * @throws java.text.ParseException
+	 * @throws JobsNotFoundException se il lavoro non è stato trovato.
+	 * @return FilteredStatsArray ritorna le statistiche filtrate.
+	 */
 	
 	public ArrayList<StatsParameters> StatsParsing(String data, String location, String date_posted) throws java.text.ParseException, JobsNotFoundException{
 		JSONObject obj = new JSONObject();
