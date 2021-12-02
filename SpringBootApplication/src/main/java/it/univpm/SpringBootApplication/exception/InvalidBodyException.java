@@ -17,7 +17,7 @@ public class InvalidBodyException extends Exception{
 	
 	/**
 	 * costruttore eccezione, che richiama costruttore della superclasse 
-	 * @param messaggio
+	 * @param msg messaggio di errore inserito come parametro del metodo
 	 */
 
 	public InvalidBodyException(String msg) {

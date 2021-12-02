@@ -1,0 +1,7 @@
+it.univpm.SpringBootApplication
+it.univpm.SpringBootApplication.controller
+it.univpm.SpringBootApplication.exception
+it.univpm.SpringBootApplication.filters
+it.univpm.SpringBootApplication.model
+it.univpm.SpringBootApplication.service
+it.univpm.SpringBootApplication.statistics

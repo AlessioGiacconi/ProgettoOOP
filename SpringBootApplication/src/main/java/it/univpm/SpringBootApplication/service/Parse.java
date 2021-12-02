@@ -32,12 +32,12 @@ public class Parse {
 		Languages languages = new Languages();
 	
 	       /**
-               * Metodo per parsare i dati.
-	       * @return array.
-               * @throws ParseException.
-               **/
+            * Metodo per parsare i dati.
+            * @param data Stringa contentente i dati da parsare
+            * @return array
+            * @throws ParseException se avvengono errori durante il parsing dei dati
+            **/
 	       
-	
 		public ArrayList<Job> Parsing(String data) throws ParseException {
 			JSONObject obj = new JSONObject();
 			try {
@@ -84,7 +84,7 @@ public class Parse {
 		
 	/**
 	 * Metodo statico per la conversione di un JSONString in MAP
-	 * @param jsonString JSONString da convertire
+	 * @param jsonObject Stringa da convertire in Map
 	 * @return Map Map derivante dalla conversione
 	 */
 		
@@ -96,6 +96,7 @@ public class Parse {
 	
 	/**Metodo ottenere le statistiche di un lavoro.
 	 * @param location città tra quelle presenti su cui è stata fatta la statistica
+	 * @param data Stringa contenente i dati da parsare.
 	 * @throws ParseException se il parsing del body porta a delle eccezioni.
 	 * @throws JobsNotFoundException se il lavoro non è stato trovato.
 	 * @return Statsarray ritorna le statistiche riguardanti le offerte di lavoro una volta scelta la città
@@ -165,10 +166,11 @@ public class Parse {
 	
 	/**Metodo ottenere il filtraggio delle statistiche di un lavoro.
 	 * @param location città tra quelle presenti su cui è stata fatta la statistica
-	 * @param date_posted data di annuncio dell'offerta di lavoro.
-	 * @throws java.text.ParseException
-	 * @throws JobsNotFoundException se il lavoro non è stato trovato.
-	 * @return FilteredStatsArray ritorna le statistiche filtrate.
+	 * @param data Stringa contentente i dati da parsare
+	 * @param date_posted data di annuncio dell'offerta di lavoro
+	 * @throws java.text.ParseException se avvengono degli errori durante il parsing dei dati
+	 * @throws JobsNotFoundException se il lavoro non è stato trovato
+	 * @return FilteredStatsArray ritorna le statistiche filtrate
 	 */
 	
 	public ArrayList<StatsParameters> StatsParsing(String data, String location, String date_posted) throws java.text.ParseException, JobsNotFoundException{
