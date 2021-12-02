@@ -125,10 +125,12 @@ Possibilità di filtraggio e utilizzo :
   
 "remote" : null, --> lavoro in remoto o no con le seguenti scelte null, true e false.
   
-"employment_type" : "full time" --> lavoro full time o part time
+"employment_type" : "full time" --> lavoro "full time" o "contract"
   
 }
   
+Nel caso in cui vengano inseriti dei valori non validi per i filtri verrà generata un'eccezione dal programma.
+
 N.B. All'utente è consentito anche lasciare il body vuoto: in tal caso verrano restituiti i risultati relativi a tutte le città senza essere filtrati in alcun modo.
   
 N.B. L'utente può anche inserire una stringa vuota ("") nei campi "location" oppure "employment_type". I risultati verranno comunque filtrati.
@@ -162,13 +164,15 @@ Attenzione:
 
 "location" : "Los Angeles", --> si può scegliere tra le 5 città presenti nell'applicazione (Los Angeles, Chicago, New York, San Francisco, Seattle).
     
-"num_employees" : "11-50", --> rappresenta il numero di dipendenti (1-10, 11-50, 51-100, 101-250, >250).
+"num_employees" : "11-50", --> rappresenta il numero di dipendenti (1-10, 11-50, 51-100, 101-250).
     
 "date" : "2020-10-01" --> rappresenta la data di annuncio riguardante il lavoro, l'applicazione accetta il formato yyyy-mm-dd.
   
     
 }
-  
+
+Nel caso in cui vengano inseriti dei valori non validi per i filtri verrà generata un'eccezione dal programma.
+
   N.B. All'utente è consentito anche lasciare il body vuoto: in tal caso verrano restituiti i risultati relativi a tutte le città senza essere filtrati in alcun modo.
   
   N.B. L'utente può lasciare una stringa vuota ("") in ciascuno dei tre campi. I risultati saranno comunque filtrati nel modo desiderato.
