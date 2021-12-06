@@ -25,8 +25,6 @@ public class City {
 	}
 	
 /** metodo che permette di ottente il nome della città tra le 5 presenti nell'archivio.
- * @author Alessio Giacconi
- * @author Erxhes Dedja
  */
 	
 	public Vector<String> getNames(){
