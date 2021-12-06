@@ -66,8 +66,8 @@ public class Job {
 	
 	
 	 /**
-		 * Costruttore della classe Job che inizializza un'istanza.
-     **/
+	 * Costruttore della classe Job che inizializza un'istanza.
+         **/
 	
 	public Job() {
 		
@@ -94,7 +94,7 @@ public class Job {
 	}
 	
 	/** metodo che serve per impostare l'id
-	 * @param id Id passato dal chiamante
+	 * @param Id passato dal chiamante
 	 */
 	
 	public void setId(long id) {
