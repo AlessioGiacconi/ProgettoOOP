@@ -77,7 +77,7 @@ public class restController {
 	 * Rotta di tipo GET che effettua il calcolo delle statistiche.
 	 * Ci permette di generare statistiche sui lavori trovati, riguardanti la tipologia (quantità e percentuale di lavori in remoto e non), 
 	 * gli altri linguaggi richiesti insieme al python
-	 * @return Ritornano le statistiche effettuate.
+	 * @return Ritorna le statistiche effettuate.
 	 */
 	
 	@GetMapping(value="/allStats")
