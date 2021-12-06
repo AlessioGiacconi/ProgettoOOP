@@ -16,7 +16,7 @@ public class InvalidBodyException extends Exception{
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * costruttore eccezione, che richiama costruttore della superclasse 
+	 * costruttore eccezione che richiama costruttore della superclasse 
 	 * @param msg messaggio di errore inserito come parametro del metodo
 	 */
 
