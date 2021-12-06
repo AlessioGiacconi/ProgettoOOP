@@ -94,9 +94,9 @@ public class Parse {
 		return map;
 	}
 	
-	/**Metodo ottenere le statistiche di un lavoro.
-	 * @param location città tra quelle presenti su cui è stata fatta la statistica
-	 * @param data Stringa contenente i dati da parsare.
+	/**Metodo per ottenere le statistiche di un lavoro.
+	 * @param location città tra quelle presenti su cui è stata effettuata la statistica
+	 * @param  data Stringa contenente i dati da parsare.
 	 * @throws ParseException se il parsing del body porta a delle eccezioni.
 	 * @throws JobsNotFoundException se il lavoro non è stato trovato.
 	 * @return Statsarray ritorna le statistiche riguardanti le offerte di lavoro una volta scelta la città
@@ -164,7 +164,7 @@ public class Parse {
 		return StatsArray;
 	}
 	
-	/**Metodo ottenere il filtraggio delle statistiche di un lavoro.
+	/**Metodo per ottenere il filtraggio delle statistiche di un lavoro.
 	 * @param location città tra quelle presenti su cui è stata fatta la statistica
 	 * @param data Stringa contentente i dati da parsare
 	 * @param date_posted data di annuncio dell'offerta di lavoro
