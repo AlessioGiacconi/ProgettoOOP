@@ -58,7 +58,6 @@ public class restController {
 	}
 	
 	/**Rotta di tipo POST che effettua il filtraggio delle offerte di lavoro in base a location, lavoro in remoto e non, part-time o full-time.
-	 * Le parole chiave vengono prelevate dal body della richiesta.
 	 * @return JSONArray con le offerte che soddisfano la richiesta.
 	 */
 	
