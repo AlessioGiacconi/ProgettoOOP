@@ -13,7 +13,7 @@ public class StatsErrorException extends Exception{
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * costruttore eccezione, che richiama costruttore della superclasse 
+	 * costruttore eccezione che richiama costruttore della superclasse 
 	 * @param messaggio
 	 */
 
