@@ -84,8 +84,8 @@ parametri di ricerca illustrati a seguire.
 
 # ROTTE
 
-|Rotte    | Metodo | Descrizione | Campo |
-|---------|------------|-------|---------|
+|Rotte    | Metodo | Descrizione |
+|---------|------------|-------|
 |  "/Jobs"      | Get  | Rotta che restituisce tutte le offerte di lavoro presenti su FindWork relative alle città monitorate||
 |  "/Filters"    | Post | Rotta che restituisce le offerte di lavoro filtrate in base ai parametri inseriti dall'utente nel body||
 |  "/allStats"     | Get | Rotta che restituisce le statistiche per tutte le città monitorate||
