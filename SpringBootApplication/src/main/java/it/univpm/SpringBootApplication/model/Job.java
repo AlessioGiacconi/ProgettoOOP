@@ -94,7 +94,7 @@ public class Job {
 	}
 	
 	/** metodo che serve per impostare l'id
-	 * @param Id passato dal chiamante
+	 * @param id passato dal chiamante
 	 */
 	
 	public void setId(long id) {
@@ -110,7 +110,6 @@ public class Job {
 	}
 
 	/** metodo che permette di scegliere il nome dell'azienda
-	 * @return company_name nome azienda 
 	 */
 	
 	
@@ -127,7 +126,6 @@ public class Job {
 	}
 	
 	/** metodo utilizzato per impostare il numero di lavoratori
-	 * @return nume_employees
 	 */
 	
 	
@@ -147,7 +145,6 @@ public class Job {
 	
 	/**
 	 * metodo che permette di impostare la città desiderata dove cercare lavoro
-	 * @return location
 	 */
 	
 	
@@ -168,7 +165,6 @@ public class Job {
 	
 	/**
 	 * metodo che permette di impostare se il lavoro deve essere in remoto o non.
-	 * @return remote
 	 */
 	
 	public void setRemote(boolean remote) {
@@ -186,7 +182,6 @@ public class Job {
 	
 	/**
 	 * metodo che permette di impostare il numero di lavoratori
-	 * @return employment_type
 	 */
 	
 	public void setEmployment_type(String employment_type) {
@@ -205,7 +200,6 @@ public class Job {
 	
 	/**
 	 * metodo che permette di impostare la data
-	 * @return date
 	 */
 	
 	
@@ -224,7 +218,6 @@ public class Job {
 	
 	/**
 	 * metodo che serve per impostare il valore attributo url
-	 * @return url
 	 */
 	
 	public void setUrl(String url) {
@@ -242,7 +235,6 @@ public class Job {
 	
 	/**
 	 * metodo che serve per impostare il linguaggio desiderato
-	 * @return keywords
 	 */
 	public void setKeywords(ArrayList<String> keywords) {
 		this.keywords = keywords;

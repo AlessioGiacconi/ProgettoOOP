@@ -15,7 +15,7 @@ public class JobsNotFoundException extends Exception {
 	
 	/**
 	 * costruttore eccezione che richiama costruttore della superclasse 
-	 * @param messaggio
+	 * @param msg stringa di descrizione dell'eccezione
 	 */
 	
 	public JobsNotFoundException() {

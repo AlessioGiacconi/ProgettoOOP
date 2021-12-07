@@ -26,7 +26,8 @@ public class FindJobs {
 	/**
         * Metodo che permette di ottenere tutte le offerte di lavoro a partire dall'url che forniamo.
         * @return allJobs tutti i lavori trovati
-        * @throws NoJobFoundException Eccezione personalizzata nel caso in cui il lavoro non fosse trovato
+        * @throws JobsNotFoundException Eccezione personalizzata nel caso in cui il lavoro non fosse trovato
+        * @throws ParseException Eccezione generata nel caso in cui si verifichino errori nel parsing dei dati
         */
 		
 	public ArrayList<Job> getJobs() throws ParseException, JobsNotFoundException {

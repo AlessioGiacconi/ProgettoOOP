@@ -98,7 +98,6 @@ public class StatsParameters {
 	
         /**
         * metodo che permette di impostare la città desiderata.
-        * @return location
         **/
 	
 	public void setLocation(String location) {
@@ -116,7 +115,6 @@ public class StatsParameters {
 	
 	/**
         * metodo per settare il count_results
-        * @return count_results
         **/
 	
 	public void setCont_results(int cont_results) {
@@ -135,7 +133,6 @@ public class StatsParameters {
 	
 	/**
         * metodo che imposta i lavori in remoto
-        * @return n_remote_true
         **/
 	
 	public void setN_remote_true(int n_remote_true) {
@@ -153,7 +150,6 @@ public class StatsParameters {
 	
 	/**
         * metodo che serve per impostare la possibiltà di cercare lavori non in remoto
-        * @return n-remote_false
         **/
 	
 	public void setN_remote_false(int n_remote_false) {
@@ -171,7 +167,6 @@ public class StatsParameters {
 	
 	/**
         * metodo che serve per impostare la percentuale di lavori in remoto
-        * @return perc_remote_true
         **/
 	
 	public void setPerc_remote_true(double perc_remote_true) {
@@ -189,7 +184,6 @@ public class StatsParameters {
 	
 	/**
         * metodo che serve per impostare la percentuale di lavori non in remoto
-        * @return perc_remote_false
         **/
 	
 	public void setPerc_remote_false(double perc_remote_false) {
@@ -207,7 +201,6 @@ public class StatsParameters {
 	
 	/**
         * metodo che serve per impostare la tipologia di linguaggio che si desidera
-        * @return high_requested_languages
         **/
 	
 	public void setHigh_requested_language(String high_requested_language) {
@@ -225,7 +218,6 @@ public class StatsParameters {
         
 	/**
         * metodo che serve per impostare la data da cui si vuole cercare un lavoro
-        * @return from_date
         **/
 	
 	public void setFrom_date(String from_date) {
